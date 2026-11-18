@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { ACCESS_TOKEN_SECRET } from '../utils/env.js';
 export const isAuthenticated = (req, resp, next) => {
-    const token = req.headers?.token || req.cookies?.token || null;
+    const token = req.headers?.authorization?.split(" ")[1] || null;
     try {
         if (!token) {
             return resp.status(401).json({

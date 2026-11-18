@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto'
 import { ACCESS_TOKEN_EXPIRY, ACCESS_TOKEN_SECRET, REFRESH_TOKEN_EXPIRY, REFRESH_TOKEN_SECRET } from './env.js';
-export const generateAccessToken=(user)=>{
+export const generateAccessToken=(user)=>{ 
     const token=jwt.sign(
         {
         sub: user._id.toString(),

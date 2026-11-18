@@ -6,7 +6,7 @@ const refreshSessionSchema = new mongoose.Schema(
       ref: "User",
       required: true,
       index: true
-    },
+    }, 
 
     tokenHash: {
       type: String,
